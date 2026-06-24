@@ -31,14 +31,15 @@ export const config = {
     {
       platformName: 'Android',
       'appium:automationName': 'UiAutomator2',
-      'appium:deviceName': 'Samsung Galaxy S23',
-      'appium:platformVersion': '13.0',
+      // Lower-demand mid-range device → allocates fast, no flagship queue.
+      'appium:deviceName': 'Xiaomi Redmi Note 11',
+      'appium:platformVersion': '11.0',
       // BrowserStack runs the build you uploaded (bs://...), not a local appPackage.
       'appium:app': process.env.BROWSERSTACK_APP,
       'bstack:options': {
         projectName: 'Appium Bootcamp',
         buildName: 'session-3-cloud',
-        sessionName: 'login · Galaxy S23',
+        sessionName: 'login · Redmi Note 11',
       },
     },
     // Second real device — same spec, runs IN PARALLEL with the S23 (maxInstances: 2).
