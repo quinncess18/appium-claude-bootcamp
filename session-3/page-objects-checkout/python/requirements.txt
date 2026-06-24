@@ -1,0 +1,4 @@
+# Session 3 homework #2 — Page Objects: search -> checkout (Python)
+Appium-Python-Client>=4.0.0
+selenium>=4.18.0
+pytest>=8.0.0

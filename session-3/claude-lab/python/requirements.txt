@@ -1,0 +1,4 @@
+# Claude-lab authored test — Python
+Appium-Python-Client>=4.0.0
+selenium>=4.18.0
+pytest>=8.0.0
