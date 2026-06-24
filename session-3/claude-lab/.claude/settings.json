@@ -1,0 +1,39 @@
+{
+  "$comment": "Project settings — checked into git, shared with the team. Controls what Claude may do without asking. Personal overrides go in .claude/settings.local.json (gitignored).",
+  "permissions": {
+    "allow": [
+      "Read(./**)",
+      "Edit(./**)",
+      "Bash(npm install)",
+      "Bash(npm test)",
+      "Bash(npx wdio *)",
+      "Bash(pytest *)",
+      "Bash(pip install *)",
+      "Bash(adb devices)",
+      "Bash(adb shell *)",
+      "mcp__appium__*"
+    ],
+    "ask": [
+      "Bash(adb uninstall *)",
+      "Bash(git push *)"
+    ],
+    "deny": [
+      "Read(./**/.env)",
+      "Read(./**/*secret*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-no-sleep.sh\""
+          }
+        ]
+      }
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}

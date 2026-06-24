@@ -1,0 +1,12 @@
+{
+  "$comment": "Appium MCP server — lets Claude drive the emulator (launch the app, tap, read locators). Project-scoped: open Claude FROM this claude-lab/ folder. Replace ANDROID_HOME with YOUR Android SDK path (Windows: D:\\Users\\<you>\\AppData\\Local\\Android\\Sdk; macOS: ~/Library/Android/sdk).",
+  "mcpServers": {
+    "appium": {
+      "command": "npx",
+      "args": ["-y", "appium-mcp@latest"],
+      "env": {
+        "ANDROID_HOME": "<path-to-your-Android-Sdk>"
+      }
+    }
+  }
+}
