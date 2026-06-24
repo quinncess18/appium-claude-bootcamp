@@ -1,0 +1,17 @@
+{
+  "name": "appium-bootcamp-cloud-devices-lab-node",
+  "version": "1.0.0",
+  "description": "Session 3 — Cloud Devices lab: same tests on a real-device grid (WebdriverIO + Mocha) — SCAFFOLD",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test:local": "wdio run ./wdio.conf.js",
+    "test:cloud": "wdio run ./wdio.bstack.conf.js"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.0.0",
+    "@wdio/local-runner": "^9.0.0",
+    "@wdio/mocha-framework": "^9.0.0",
+    "@wdio/spec-reporter": "^9.0.0"
+  }
+}
